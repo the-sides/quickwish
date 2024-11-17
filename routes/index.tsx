@@ -1,5 +1,4 @@
 import { useSignal } from "@preact/signals";
-import NameModal from "../islands/NameModal.tsx";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { getLists } from "../lib/lists.ts";
 

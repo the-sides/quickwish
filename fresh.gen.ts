@@ -13,7 +13,6 @@ import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $list_name_ from "./routes/list/[name].tsx";
 import * as $ItemAdder from "./islands/ItemAdder.tsx";
-import * as $NameModal from "./islands/NameModal.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -31,7 +30,6 @@ const manifest = {
   },
   islands: {
     "./islands/ItemAdder.tsx": $ItemAdder,
-    "./islands/NameModal.tsx": $NameModal,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

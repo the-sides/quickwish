@@ -1,7 +1,7 @@
 import { type PageProps } from "$fresh/server.ts";
-import NameModal from "../islands/NameModal.tsx";
+import NameModal from "../components/NameModal.tsx";
+
 export default function App({ Component, state }: PageProps) {
-  console.log(state);
   return (
     <html>
       <head>
@@ -19,7 +19,7 @@ export default function App({ Component, state }: PageProps) {
           </nav>
         </header>
         <Component />
-        <NameModal existingName={state.name as string} />
+        {!state.name && <NameModal existingName={state.name as string} />}
       </body>
     </html>
   );
