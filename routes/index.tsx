@@ -11,12 +11,14 @@ export const handler = async (_req: Request, ctx: FreshContext) => {
 export default function Home({ data }: PageProps) {
   const slugName = data.name.replace(/\s+/g, "-").toLowerCase();
   return (
-    <main class={"flex-1 min-h-full"}>
-      <div class="px-4 py-8 mx-auto text-white text-xl">
+    <main class={"max-w-screen-md mx-auto min-h-full"}>
+      <div class="px-4 py-8 text-white text-xl">
         <a href={"list/" + slugName} className="">View Personal List</a>
         <p>Lists:</p>
         <div className="pl-4">
-          {data.lists.map(list => <a href={'/list/'+list} class="block text-lg underline">{list}</a>)}
+          {data.lists.map((list) => (
+            <a href={"/list/" + list} class="block text-lg underline">{list}</a>
+          ))}
         </div>
       </div>
     </main>

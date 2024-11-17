@@ -32,5 +32,3 @@ jobs:
           project: "the-sides-quickwish"
           entrypoint: "main.ts"
           root: "."
-          
-          

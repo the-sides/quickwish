@@ -49,7 +49,8 @@ export default function NameModal(props: NameModalProps) {
           </div>
         </form>
       </div>
-      <div className="absolute inset-0 h-full w-full bg-black bg-opacity-60 reveal"></div>
+      <div className="absolute inset-0 h-full w-full bg-black bg-opacity-60 reveal">
+      </div>
     </div>
   );
 }

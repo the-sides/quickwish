@@ -9,8 +9,10 @@ export async function handler(
   ctx: FreshContext<State>,
 ) {
   const cookie = req.headers.get("Cookie");
-  const name = cookie?.split("; ").find(row => row.startsWith("name="))?.split("=")[1] || '';
+  const name =
+    cookie?.split("; ").find((row) => row.startsWith("name="))?.split("=")[1] ||
+    "";
   ctx.state.name = name;
-  
+
   return await ctx.next();
 }

@@ -7,11 +7,12 @@ import * as $_app from "./routes/_app.tsx";
 import * as $_middleware from "./routes/_middleware.ts";
 import * as $about_index from "./routes/about/index.tsx";
 import * as $api_add_item from "./routes/api/add-item.ts";
+import * as $api_delete_item from "./routes/api/delete-item.ts";
 import * as $api_hello from "./routes/api/hello.ts";
 import * as $api_save_name from "./routes/api/save-name.ts";
-import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $list_name_ from "./routes/list/[name].tsx";
+import * as $DeleteButton from "./islands/DeleteButton.tsx";
 import * as $ItemAdder from "./islands/ItemAdder.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
@@ -22,13 +23,14 @@ const manifest = {
     "./routes/_middleware.ts": $_middleware,
     "./routes/about/index.tsx": $about_index,
     "./routes/api/add-item.ts": $api_add_item,
+    "./routes/api/delete-item.ts": $api_delete_item,
     "./routes/api/hello.ts": $api_hello,
     "./routes/api/save-name.ts": $api_save_name,
-    "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
     "./routes/list/[name].tsx": $list_name_,
   },
   islands: {
+    "./islands/DeleteButton.tsx": $DeleteButton,
     "./islands/ItemAdder.tsx": $ItemAdder,
   },
   baseUrl: import.meta.url,
