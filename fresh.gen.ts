@@ -4,22 +4,26 @@
 
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
-import * as $api_joke from "./routes/api/joke.ts";
+import * as $_middleware from "./routes/_middleware.ts";
+import * as $about_index from "./routes/about/index.tsx";
+import * as $api_save_name from "./routes/api/save-name.ts";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
-import * as $Counter from "./islands/Counter.tsx";
+import * as $NameModal from "./islands/NameModal.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
-    "./routes/api/joke.ts": $api_joke,
+    "./routes/_middleware.ts": $_middleware,
+    "./routes/about/index.tsx": $about_index,
+    "./routes/api/save-name.ts": $api_save_name,
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
   },
   islands: {
-    "./islands/Counter.tsx": $Counter,
+    "./islands/NameModal.tsx": $NameModal,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

@@ -1,5 +1,6 @@
 import { type PageProps } from "$fresh/server.ts";
-export default function App({ Component }: PageProps) {
+export default function App({ Component, state }: PageProps) {
+  console.log(state);
   return (
     <html>
       <head>
