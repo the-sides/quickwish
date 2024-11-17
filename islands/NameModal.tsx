@@ -57,6 +57,7 @@ export default function NameModal(props: NameModalProps) {
                 if (response.ok) {
                   // Assuming the server responds with the saved name, or some confirmation
                   const result = await response.text();
+                  window.location.reload();
                   console.log("Saved name:", result);
                 } else {
                   // Handle errors if needed
