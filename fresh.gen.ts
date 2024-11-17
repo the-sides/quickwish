@@ -9,6 +9,7 @@ import * as $about_index from "./routes/about/index.tsx";
 import * as $api_save_name from "./routes/api/save-name.ts";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
+import * as $list_name_ from "./routes/list/[name].tsx";
 import * as $NameModal from "./islands/NameModal.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
@@ -21,6 +22,7 @@ const manifest = {
     "./routes/api/save-name.ts": $api_save_name,
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
+    "./routes/list/[name].tsx": $list_name_,
   },
   islands: {
     "./islands/NameModal.tsx": $NameModal,
