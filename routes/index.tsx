@@ -17,7 +17,7 @@ export default function Home({ data }: PageProps) {
         <a href={"list/" + slugName} className="">View Personal List</a>
         <p>Lists:</p>
         <div className="pl-4">
-          {data.lists.map(list => <a href={'/list/'+list} class="text-lg underline">{list}</a>)}
+          {data.lists.map(list => <a href={'/list/'+list} class="block text-lg underline">{list}</a>)}
         </div>
       </div>
     </main>
